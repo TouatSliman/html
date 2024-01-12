@@ -2,22 +2,29 @@
 <html lang="en">
   <head>
     <!--google font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
-    <!--css style-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&family=Roboto+Mono:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!----------------->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hello And Wellcom</title>
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/TouatSliman/img/52a3c7b0aef677313f1736967a314f79f23e73b8/icon.svg" />
+    <link
+      rel="shortcut icon"
+      href="https://raw.githubusercontent.com/TouatSliman/img/52a3c7b0aef677313f1736967a314f79f23e73b8/icon.svg"
+    />
+    <!--css style-->
     <style>
       body {
         background-image: linear-gradient(0.25deg, white, rgb(95, 93, 93));
         margin: 0;
-        font-family: 'Roboto Mono', monospace;
+        font-family: "Roboto Mono", monospace;
         margin: 0 10%;
       }
-      .button{
+      .button {
         color: blue;
         text-decoration: none;
         width: 160px;
@@ -28,17 +35,20 @@
         background-color: rgba(0, 0, 0, 0.603);
         font-size: 1rem;
       }
-      .button:hover{
-        transition: all .2s;
+      .button:hover {
+        transition: all 0.2s;
         background-color: #000000c9;
         scale: 1.07;
       }
-      .title{
-        font-family: 'Josefin Sans', sans-serif;
+      .title {
+        font-family: "Josefin Sans", sans-serif;
       }
-      .profil{
+      .profil {
         width: 155px;
         border-radius: 100%;
+      }
+      .hidden{
+        display: none;
       }
     </style>
   </head>
@@ -48,16 +58,16 @@
         <td>
           <img
             class="profil"
-            src="https://avatars.githubusercontent.com/u/138781738?s=400&u=72c6104568f05a2c2445024aee7da0be0834aca7&v=4"
+            src="https://github.com/TouatSliman/img/blob/main/profil.jpg?raw=true"
             alt="profil"
           />
         </td>
         <td>
           <h1 class="title">
-            <em><span></span>Sliman</em>
+            <em id="but">Sliman</em>
           </h1>
-          <h4>Student University</h4>
-          <h4>
+          <h4 id="main1">Student University</h4>
+          <h4 id="main2">
             departement
             <a
               href="https://www.univ-sba.dz/fse/departements/departement-de-informatique/"
@@ -67,7 +77,7 @@
         </td>
       </tr>
     </table>
-
+    <div id="main">
     <br />
     <p>
       I am a student at <b>UDL sba</b>, I am learning <strong>now</strong> 🚀 .
@@ -128,8 +138,17 @@
     <center>
       <b><i>&copy;</i></b>
     </center>
-    <script >
-      alert('Wellcome ❤️');
+    </div>
+    <script>
+      const pass = prompt('Wellcome ❤️\nthe password :');
+      if(pass == "0000"){
+
+      }else{
+        document.getElementById('but').innerHTML = "wrong !!";
+        document.getElementById('main1').innerHTML = "wrong password !";
+        document.getElementById('main2').innerHTML = "try again";
+        document.getElementById("main").classList.add("hidden");
+      }
     </script>
   </body>
 </html>
